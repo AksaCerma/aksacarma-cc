@@ -1,0 +1,8 @@
+.env
+__pycache__/
+.conda_env
+.gcloudignore
+.gitignore
+requirements_local.txt
+create_tables.sql
+image/

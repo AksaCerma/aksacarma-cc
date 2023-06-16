@@ -1,0 +1,11 @@
+.env
+__pycache__/
+.conda_env/
+aksacarma-2e5f57e8e8c5.json
+aksacarma_cloud_storage_sa_a850f4.zip
+main.build/
+main.dist/
+main.exe
+saved_model/ml-aksacarma/variables/variables.data-00000-of-00001
+# saved_model/
+# test-image/

@@ -1,0 +1,34 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+          'asia-east1-docker.pkg.dev/aksacarma/backend-api/api:main',
+          '--build-arg', 'SECRET_KEY=${_SECRET_KEY}',
+          '--build-arg', 'GOOGLE_KEY_1=${_GOOGLE_KEY_1}',
+          '--build-arg', 'GOOGLE_KEY_2=${_GOOGLE_KEY_2}',
+          '--build-arg', 'GOOGLE_KEY_3=${_GOOGLE_KEY_3}',
+          '--build-arg', 'GOOGLE_KEY_4=${_GOOGLE_KEY_4}',
+          '--build-arg', 'GOOGLE_KEY_5=${_GOOGLE_KEY_5}',
+          '--build-arg', 'DB_HOST=${_DB_HOST}',
+          '--build-arg', 'DB_PORT=${_DB_PORT}',
+          '--build-arg', 'DB_USER=${_DB_USER}',
+          '--build-arg', 'DB_PASS=${_DB_PASS}',
+          '--build-arg', 'DB_NAME=${_DB_NAME}',
+          '--build-arg', 'SA_KEY=${_SA_KEY}',
+          '--file', 'Dockerfile.git',
+          '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',
+          'asia-east1-docker.pkg.dev/aksacarma/backend-api/api:main']
+  
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'backend-api',
+          '--allow-unauthenticated',
+          '--region=asia-southeast2',
+          '--image=asia-east1-docker.pkg.dev/aksacarma/backend-api/api:main',
+          '--port=8005', 
+          '--memory=2Gi',
+          '--min-instances=1']
+
+# options:
+#   logging: CLOUD_LOGGING_ONLY

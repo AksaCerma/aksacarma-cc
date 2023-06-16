@@ -1,0 +1,13 @@
+aiomysql
+black
+PyJWT
+fastapi
+tensorflow
+numpy
+pillow
+async_cse
+pydantic
+uvicorn
+python-multipart
+python-dotenv
+google-cloud-storage

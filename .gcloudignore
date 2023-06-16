@@ -1,0 +1,5 @@
+.env
+__pycache__/
+.conda_env/
+create_tables.sql
+image/
