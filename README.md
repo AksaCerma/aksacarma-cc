@@ -13,7 +13,7 @@ There are two ways to run this API locally. First, run directly in host, second,
 * Clone this repo.
 
   ```
-  git clone https://github.com/AksaCerma/backend-api.git
+  git clone https://github.com/AksaCerma/aksacarma-cc.git
   ```
 * Download machine learning model.
 
@@ -34,7 +34,7 @@ There are two ways to run this API locally. First, run directly in host, second,
 
 ### Run in Docker
 
-In this repo, there are two Dockerfile. You can download the [Dockerfile.git](https://raw.githubusercontent.com/AksaCerma/backend-api/main/Dockerfile.git) only or clone the repo and use the [Dockerfile](https://raw.githubusercontent.com/AksaCerma/backend-api/main/Dockerfile).
+In this repo, there are two Dockerfile. You can download the [Dockerfile.git](https://raw.githubusercontent.com/AksaCerma/aksacarma-cc/main/Dockerfile.git) only or clone the repo and use the [Dockerfile](https://raw.githubusercontent.com/AksaCerma/aksacarma-cc/main/Dockerfile).
 
 * Build the image.
 
@@ -92,7 +92,7 @@ This API requires three tables to work on.
 | history       | Detect skin history            |
 | search_result | Search result for user history |
 
-The queries to create this tables are in [create_tables.sql](https://raw.githubusercontent.com/AksaCerma/backend-api/main/create_tables.sql) file. Please run the queries sequentialy.
+The queries to create this tables are in [create_tables.sql](https://raw.githubusercontent.com/AksaCerma/aksacarma-cc/main/create_tables.sql) file. Please run the queries sequentialy.
 
 ## Service Account
 

@@ -6,7 +6,7 @@ ENV GIT_LFS_SKIP_SMUDGE=1
 
 # RUN apt update && apt install git git-lfs -y && apt install p7zip-full -y && apt-get install wget -y
 RUN apt update && apt install git git-lfs -y && \
-    git clone https://github.com/AksaCerma/backend-api.git && \
+    git clone https://github.com/AksaCerma/aksacarma-cc.git && \
     apt purge --autoremove git git-lfs -y && apt clean
 
 WORKDIR /usr/src/backend-api/saved_model/ml-aksacarma/variables
