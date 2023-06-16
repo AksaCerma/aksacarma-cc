@@ -14,7 +14,7 @@ steps:
           '--build-arg', 'DB_PASS=${_DB_PASS}',
           '--build-arg', 'DB_NAME=${_DB_NAME}',
           '--build-arg', 'SA_KEY=${_SA_KEY}',
-          '--file', 'Dockerfile.git',
+          '--file', 'Dockerfile',
           '.']
 
   - name: 'gcr.io/cloud-builders/docker'
